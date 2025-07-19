@@ -3,8 +3,8 @@ import fetch from "node-fetch";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const SELF_URL = "https://kcazzydata.onrender.com/leaderboard/top14";
-const API_KEY = "9emj7LErCZydUlTRZpHCuiWdn64atsNF";
+const SELF_URL = "https://slackerdata.onrender.com/leaderboard/top14";
+const API_KEY = "HTh0wMsKcCNHx4fLcIyZpbuHACYJGSiT";
 
 let cachedData = [];
 
