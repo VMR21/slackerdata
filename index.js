@@ -22,7 +22,7 @@ function maskUsername(username) {
   return username.slice(0, 2) + "***" + username.slice(-2);
 }
 
-// 📅 Get leaderboard range (19th to 18th)
+// 📅 Get leaderboard range (18th to 17th)
 function getLeaderboardDateRange(offset = 0) {
   const now = new Date();
   const year = now.getUTCFullYear();
@@ -30,25 +30,25 @@ function getLeaderboardDateRange(offset = 0) {
 
   let start, end;
 
-  const inCurrentPeriod = now.getUTCDate() >= 19;
+  const inCurrentPeriod = now.getUTCDate() >= 18;
 
   if (offset === 0) {
     // Current period
     if (inCurrentPeriod) {
-      start = new Date(Date.UTC(year, month, 19));
-      end = new Date(Date.UTC(year, month + 1, 18, 23, 59, 59));
+      start = new Date(Date.UTC(year, month, 18));
+      end = new Date(Date.UTC(year, month + 1, 17, 23, 59, 59));
     } else {
-      start = new Date(Date.UTC(year, month - 1, 19));
-      end = new Date(Date.UTC(year, month, 18, 23, 59, 59));
+      start = new Date(Date.UTC(year, month - 1, 18));
+      end = new Date(Date.UTC(year, month, 17, 23, 59, 59));
     }
   } else if (offset === -1) {
     // Previous period
     if (inCurrentPeriod) {
-      start = new Date(Date.UTC(year, month - 1, 19));
-      end = new Date(Date.UTC(year, month, 18, 23, 59, 59));
+      start = new Date(Date.UTC(year, month - 1, 18));
+      end = new Date(Date.UTC(year, month, 17, 23, 59, 59));
     } else {
-      start = new Date(Date.UTC(year, month - 2, 19));
-      end = new Date(Date.UTC(year, month - 1, 18, 23, 59, 59));
+      start = new Date(Date.UTC(year, month - 2, 18));
+      end = new Date(Date.UTC(year, month - 1, 17, 23, 59, 59));
     }
   }
 
